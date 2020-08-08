@@ -11,9 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cbe114-bc96-4a5d-a566-006995355087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components/.gitkeep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/balance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/balance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -293,7 +299,7 @@
       <workItem from="1596886872286" duration="553000" />
       <workItem from="1596889724522" duration="1282000" />
       <workItem from="1596891471503" duration="250000" />
-      <workItem from="1596891899982" duration="2449000" />
+      <workItem from="1596891899982" duration="3541000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1596905897658</created>
@@ -302,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596905897658</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1596906265290</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596906265290</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +335,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Add react-rails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add react-rails" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596903250694">
@@ -333,22 +347,22 @@
       <screen x="0" y="23" width="1440" height="846" />
     </state>
     <state x="453" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.846@0.23.1440.846" timestamp="1596886886911" />
-    <state width="1398" height="290" key="GridCell.Tab.0.bottom" timestamp="1596905845795">
+    <state width="1398" height="227" key="GridCell.Tab.0.bottom" timestamp="1596906509545">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="290" key="GridCell.Tab.0.bottom/0.23.1440.846@0.23.1440.846" timestamp="1596905845795" />
-    <state width="1398" height="290" key="GridCell.Tab.0.center" timestamp="1596905845794">
+    <state width="1398" height="227" key="GridCell.Tab.0.bottom/0.23.1440.846@0.23.1440.846" timestamp="1596906509545" />
+    <state width="1398" height="227" key="GridCell.Tab.0.center" timestamp="1596906509544">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="290" key="GridCell.Tab.0.center/0.23.1440.846@0.23.1440.846" timestamp="1596905845794" />
-    <state width="1398" height="290" key="GridCell.Tab.0.left" timestamp="1596905845794">
+    <state width="1398" height="227" key="GridCell.Tab.0.center/0.23.1440.846@0.23.1440.846" timestamp="1596906509544" />
+    <state width="1398" height="227" key="GridCell.Tab.0.left" timestamp="1596906509543">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="290" key="GridCell.Tab.0.left/0.23.1440.846@0.23.1440.846" timestamp="1596905845794" />
-    <state width="1398" height="290" key="GridCell.Tab.0.right" timestamp="1596905845795">
+    <state width="1398" height="227" key="GridCell.Tab.0.left/0.23.1440.846@0.23.1440.846" timestamp="1596906509543" />
+    <state width="1398" height="227" key="GridCell.Tab.0.right" timestamp="1596906509544">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="290" key="GridCell.Tab.0.right/0.23.1440.846@0.23.1440.846" timestamp="1596905845795" />
+    <state width="1398" height="227" key="GridCell.Tab.0.right/0.23.1440.846@0.23.1440.846" timestamp="1596906509544" />
     <state width="1398" height="320" key="GridCell.Tab.1.bottom" timestamp="1596905781482">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
