@@ -11,14 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64cbe114-bc96-4a5d-a566-006995355087" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/balance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/balance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components/record.js.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components/record_form.js.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/components/records.js.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/utils.js.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/records.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/records_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/records_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/record.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/records/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200809193434_create_records.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/records_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/records.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/record_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +76,26 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Rake.db:migrate: balance">
+  <component name="RunManager" selected="Rails.Development: balance">
+    <configuration name="Rails console: balance" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="balance" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console -- --simple-prompt --legacy" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <method v="2" />
+    </configuration>
     <configuration name="Balance: development" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="balance" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
@@ -284,6 +313,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="IRB console.Rails console: balance" />
         <item itemvalue="Rake.db:migrate: balance" />
       </list>
     </recent_temporary>
@@ -299,7 +329,7 @@
       <workItem from="1596886872286" duration="553000" />
       <workItem from="1596889724522" duration="1282000" />
       <workItem from="1596891471503" duration="250000" />
-      <workItem from="1596891899982" duration="3541000" />
+      <workItem from="1596891899982" duration="6379000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1596905897658</created>
@@ -315,7 +345,21 @@
       <option name="project" value="LOCAL" />
       <updated>1596906265290</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1596908683556</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596908683556</updated>
+    </task>
+    <task id="LOCAL-00004" summary="React on rails gem">
+      <created>1596908715975</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596908715975</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,67 +378,69 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Add react-rails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add react-rails" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="React on rails gem" />
+    <MESSAGE value="Components done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Components done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596903250694">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
     <state x="184" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.846@0.23.1440.846" timestamp="1596903250694" />
-    <state x="453" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596886886911">
+    <state x="453" y="249" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1597002299275">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state x="453" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.846@0.23.1440.846" timestamp="1596886886911" />
-    <state width="1398" height="227" key="GridCell.Tab.0.bottom" timestamp="1596906509545">
+    <state x="453" y="249" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.846@0.23.1440.846" timestamp="1597002299275" />
+    <state width="1398" height="366" key="GridCell.Tab.0.bottom" timestamp="1597004143555">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="227" key="GridCell.Tab.0.bottom/0.23.1440.846@0.23.1440.846" timestamp="1596906509545" />
-    <state width="1398" height="227" key="GridCell.Tab.0.center" timestamp="1596906509544">
+    <state width="1398" height="366" key="GridCell.Tab.0.bottom/0.23.1440.846@0.23.1440.846" timestamp="1597004143555" />
+    <state width="1398" height="366" key="GridCell.Tab.0.center" timestamp="1597004143554">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="227" key="GridCell.Tab.0.center/0.23.1440.846@0.23.1440.846" timestamp="1596906509544" />
-    <state width="1398" height="227" key="GridCell.Tab.0.left" timestamp="1596906509543">
+    <state width="1398" height="366" key="GridCell.Tab.0.center/0.23.1440.846@0.23.1440.846" timestamp="1597004143554" />
+    <state width="1398" height="366" key="GridCell.Tab.0.left" timestamp="1597004143554">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="227" key="GridCell.Tab.0.left/0.23.1440.846@0.23.1440.846" timestamp="1596906509543" />
-    <state width="1398" height="227" key="GridCell.Tab.0.right" timestamp="1596906509544">
+    <state width="1398" height="366" key="GridCell.Tab.0.left/0.23.1440.846@0.23.1440.846" timestamp="1597004143554" />
+    <state width="1398" height="366" key="GridCell.Tab.0.right" timestamp="1597004143555">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="227" key="GridCell.Tab.0.right/0.23.1440.846@0.23.1440.846" timestamp="1596906509544" />
-    <state width="1398" height="320" key="GridCell.Tab.1.bottom" timestamp="1596905781482">
+    <state width="1398" height="366" key="GridCell.Tab.0.right/0.23.1440.846@0.23.1440.846" timestamp="1597004143555" />
+    <state width="1398" height="366" key="GridCell.Tab.1.bottom" timestamp="1597004143556">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="320" key="GridCell.Tab.1.bottom/0.23.1440.846@0.23.1440.846" timestamp="1596905781482" />
-    <state width="1398" height="320" key="GridCell.Tab.1.center" timestamp="1596905781481">
+    <state width="1398" height="366" key="GridCell.Tab.1.bottom/0.23.1440.846@0.23.1440.846" timestamp="1597004143556" />
+    <state width="1398" height="366" key="GridCell.Tab.1.center" timestamp="1597004143556">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="320" key="GridCell.Tab.1.center/0.23.1440.846@0.23.1440.846" timestamp="1596905781481" />
-    <state width="1398" height="320" key="GridCell.Tab.1.left" timestamp="1596905781480">
+    <state width="1398" height="366" key="GridCell.Tab.1.center/0.23.1440.846@0.23.1440.846" timestamp="1597004143556" />
+    <state width="1398" height="366" key="GridCell.Tab.1.left" timestamp="1597004143555">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="320" key="GridCell.Tab.1.left/0.23.1440.846@0.23.1440.846" timestamp="1596905781480" />
-    <state width="1398" height="320" key="GridCell.Tab.1.right" timestamp="1596905781481">
+    <state width="1398" height="366" key="GridCell.Tab.1.left/0.23.1440.846@0.23.1440.846" timestamp="1597004143555" />
+    <state width="1398" height="366" key="GridCell.Tab.1.right" timestamp="1597004143556">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="320" key="GridCell.Tab.1.right/0.23.1440.846@0.23.1440.846" timestamp="1596905781481" />
-    <state width="1398" height="319" key="GridCell.Tab.2.bottom" timestamp="1596903505786">
+    <state width="1398" height="366" key="GridCell.Tab.1.right/0.23.1440.846@0.23.1440.846" timestamp="1597004143556" />
+    <state width="1398" height="366" key="GridCell.Tab.2.bottom" timestamp="1597004143558">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="319" key="GridCell.Tab.2.bottom/0.23.1440.846@0.23.1440.846" timestamp="1596903505786" />
-    <state width="1398" height="319" key="GridCell.Tab.2.center" timestamp="1596903505786">
+    <state width="1398" height="366" key="GridCell.Tab.2.bottom/0.23.1440.846@0.23.1440.846" timestamp="1597004143558" />
+    <state width="1398" height="366" key="GridCell.Tab.2.center" timestamp="1597004143557">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="319" key="GridCell.Tab.2.center/0.23.1440.846@0.23.1440.846" timestamp="1596903505786" />
-    <state width="1398" height="319" key="GridCell.Tab.2.left" timestamp="1596903505786">
+    <state width="1398" height="366" key="GridCell.Tab.2.center/0.23.1440.846@0.23.1440.846" timestamp="1597004143557" />
+    <state width="1398" height="366" key="GridCell.Tab.2.left" timestamp="1597004143557">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="319" key="GridCell.Tab.2.left/0.23.1440.846@0.23.1440.846" timestamp="1596903505786" />
-    <state width="1398" height="319" key="GridCell.Tab.2.right" timestamp="1596903505786">
+    <state width="1398" height="366" key="GridCell.Tab.2.left/0.23.1440.846@0.23.1440.846" timestamp="1597004143557" />
+    <state width="1398" height="366" key="GridCell.Tab.2.right" timestamp="1597004143557">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state width="1398" height="319" key="GridCell.Tab.2.right/0.23.1440.846@0.23.1440.846" timestamp="1596903505786" />
+    <state width="1398" height="366" key="GridCell.Tab.2.right/0.23.1440.846@0.23.1440.846" timestamp="1597004143557" />
     <state x="140" y="64" key="SettingsEditor" timestamp="1596903069716">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
@@ -403,17 +449,18 @@
       <screen x="0" y="23" width="1440" height="846" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1440.846@0.23.1440.846" timestamp="1596892278530" />
-    <state x="385" y="203" width="670" height="675" key="run.anything.popup" timestamp="1596903161745">
+    <state x="385" y="203" width="670" height="675" key="run.anything.popup" timestamp="1596908659793">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
-    <state x="385" y="203" width="670" height="675" key="run.anything.popup/0.23.1440.846@0.23.1440.846" timestamp="1596903161745" />
+    <state x="385" y="203" width="670" height="675" key="run.anything.popup/0.23.1440.846@0.23.1440.846" timestamp="1596908659793" />
     <state x="385" y="193" width="670" height="676" key="search.everywhere.popup" timestamp="1596903064485">
       <screen x="0" y="23" width="1440" height="846" />
     </state>
     <state x="385" y="193" width="670" height="676" key="search.everywhere.popup/0.23.1440.846@0.23.1440.846" timestamp="1596903064485" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/balance@Development__balance.rcov" NAME="Development: balance Coverage Results" MODIFIED="1596903488690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="balance" />
+    <SUITE FILE_PATH="coverage/balance@Rails_console__balance.rcov" NAME="Rails console: balance Coverage Results" MODIFIED="1597001728114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="balance" />
+    <SUITE FILE_PATH="coverage/balance@Development__balance.rcov" NAME="Development: balance Coverage Results" MODIFIED="1597004132053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="balance" />
     <SUITE FILE_PATH="coverage/balance@db_migrate__balance.rcov" NAME="db:migrate: balance Coverage Results" MODIFIED="1596905825477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="balance" />
   </component>
 </project>

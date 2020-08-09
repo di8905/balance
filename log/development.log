@@ -35,3 +35,209 @@ Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 823
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(755611129587482280)[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(755611129587482280)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRecords (20200809193434)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "records" ("id" bigserial primary key, "title" character varying, "date" date, "amount" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200809193434"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(755611129587482280)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecord Create (1.0ms)[0m  [1m[32mINSERT INTO "records" ("title", "date", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Record 1"], ["date", "2020-08-09"], ["amount", 500.0], ["created_at", "2020-08-09 19:35:41.753479"], ["updated_at", "2020-08-09 19:35:41.753479"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "records" ("title", "date", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Record 2"], ["date", "2020-08-09"], ["amount", -100.0], ["created_at", "2020-08-09 19:35:41.763202"], ["updated_at", "2020-08-09 19:35:41.763202"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:39:09 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5459)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/di/work/balance/public/packs
+[Webpacker] Subprocess Debugger (ruby-debug-ide 0.8.0.beta24, debase 0.3.0.beta34, file filtering is supported, block breakpoints supported, smart steps supported, obtaining return values supported, partial obtaining of instance variables supported) listens on 0.0.0.0:58972
+
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.1
+Time: 2319ms
+Built at: 08/09/2020 22:39:14
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5259ms (Views: 5244.8ms | ActiveRecord: 4.8ms | Allocations: 25078)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:42:18 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 5150)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:42:37 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 5132)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:43:47 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 5160)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:03 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 1.0ms | Allocations: 5283)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:15 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 5459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 33.9ms | ActiveRecord: 4.9ms | Allocations: 13573)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:16 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 5164)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:21 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 5153)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:24 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.4ms | Allocations: 5175)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:29 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms | Allocations: 5168)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:50:31 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1026)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 5139)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 22:51:55 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 4911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 35.8ms | ActiveRecord: 5.4ms | Allocations: 12913)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:05:58 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.9ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1159)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.9ms | Allocations: 5289)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:11:59 +0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.6ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 4911)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 33.4ms | ActiveRecord: 5.1ms | Allocations: 12914)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:20:41 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (1.0ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4166)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 1.0ms | Allocations: 7635)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:20:54 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1036)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 4082)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:20:58 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1036)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 4084)
+
+
