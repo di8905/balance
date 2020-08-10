@@ -241,3 +241,94 @@ Processing by RecordsController#index as HTML
 Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 4084)
 
 
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:31:47 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.9ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1159)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 3618)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:33:06 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1026)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 3472)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:36:57 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:4
+  Rendered records/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1119)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 4455)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:39:14 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1118)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms | Allocations: 4463)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-09 23:39:24 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records"[0m
+  ↳ app/views/records/index.html.erb:3
+  Rendered records/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1117)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 4470)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-11 00:30:12 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  Rendered records/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 306)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/di/work/balance/public/packs
+[Webpacker] Hash: 37d71b87449c46b8bc18
+Version: webpack 4.44.1
+Time: 7239ms
+Built at: 08/11/2020 00:30:22
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+    js/hello_react-291ae41fefff14e13e42.js   1.05 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-291ae41fefff14e13e42.js.map   1.21 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint hello_react = js/hello_react-291ae41fefff14e13e42.js js/hello_react-291ae41fefff14e13e42.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 18 hidden modules
+
+Completed 200 OK in 9530ms (Views: 9520.8ms | ActiveRecord: 0.0ms | Allocations: 9520)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-11 00:32:49 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  Rendered records/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 4234)
+
+
+Started GET "/records" for 127.0.0.1 at 2020-08-11 00:33:59 +0300
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  Rendered records/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 184)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 7218)
+
+
