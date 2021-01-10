@@ -332,3 +332,38 @@ Processing by RecordsController#index as HTML
 Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 7218)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(755611129587482280)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(755611129587482280)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/records" for 127.0.0.1 at 2021-01-10 12:50:30 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecordsController#index as HTML
+  Rendering records/index.html.erb within layouts/application
+  Rendered records/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 305)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/di/work/balance/public/packs
+[Webpacker] Hash: 1c9458d44ce315a04007
+Version: webpack 4.44.1
+Time: 2242ms
+Built at: 01/10/2021 12:50:33 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+    js/hello_react-ae12de9024cc003e1fee.js   1.05 MiB  hello_react  [emitted] [immutable]  hello_react
+js/hello_react-ae12de9024cc003e1fee.js.map   1.21 MiB  hello_react  [emitted] [dev]        hello_react
+                             manifest.json  703 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+Entrypoint hello_react = js/hello_react-ae12de9024cc003e1fee.js js/hello_react-ae12de9024cc003e1fee.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello_react.jsx] 1.05 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 18 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 2840ms (Views: 2836.5ms | ActiveRecord: 0.0ms | Allocations: 10816)
+
+
