@@ -3,7 +3,7 @@ import React from "react";
 export default class Records extends React.Component {
 
   render() {
-    const {data} = this.props
+    const records = this.props.data
 
     return (
       <div className="Records">
@@ -21,7 +21,7 @@ export default class Records extends React.Component {
           </tbody>
         </table>
         <div>
-          {console.log(data)}
+          {console.log(records)}
         </div>
       </div>
     )
