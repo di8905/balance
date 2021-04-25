@@ -1,4 +1,5 @@
 import React from "react";
+import Record from "./Record";
 
 export default class Records extends React.Component {
 
@@ -17,7 +18,9 @@ export default class Records extends React.Component {
             </tr>
           </thead>
           <tbody>
-
+              {records.map((record) => (
+                <Record record={record} />
+              ))}
           </tbody>
         </table>
         <div>
