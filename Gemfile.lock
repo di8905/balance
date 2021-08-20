@@ -58,6 +58,8 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    autoprefixer-rails (10.3.1.0)
+      execjs (~> 2)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -65,6 +67,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.7)
       msgpack (~> 1.0)
+    bootstrap (5.1.0)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.9.3, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -110,6 +116,7 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     pg (1.2.3)
+    popper_js (2.9.3)
     public_suffix (4.0.5)
     puma (4.3.5)
       nio4r (~> 2.0)
@@ -215,6 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap (~> 5.1.0)
   capybara (>= 2.15)
   jbuilder (~> 2.7)
   listen (~> 3.2)
