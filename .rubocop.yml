@@ -1,0 +1,12 @@
+Style/Documentation:
+  Enabled: false
+
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.7.2
+  Exclude:
+    - server/**/*
+    - bin/**/*
+    - node_modules/**/*
+    - tmp/**/*
+    - vendor/**/*
