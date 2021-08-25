@@ -8,9 +8,9 @@ export default class Records extends React.Component {
     const records = this.props.data
 
     return (
-      <div>
+      <div className="records">
         <RecordForm></RecordForm>
-        <div className="Records">
+        <div >
           <h2 className={"title"}>Suppa records</h2>
           <table className={"table table-bordered"}>
             <thead>
@@ -26,9 +26,6 @@ export default class Records extends React.Component {
             ))}
             </tbody>
           </table>
-          <div>
-            {console.log(records)}
-          </div>
         </div>
       </div>
 

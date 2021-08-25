@@ -7,8 +7,8 @@ export default class RecordForm extends React.Component {
     amount: ''
   }
 
-  handleChange = () => {
-
+  makeChanger = key => value => {
+    this.setState(prevState => ({...prevState, [key]: value}))
   }
 
   render () {
@@ -21,7 +21,7 @@ export default class RecordForm extends React.Component {
             placeholder="Date"
             name="Date"
             value={this.state.date}
-            onChange={this.handleChange}
+            onChange={this.makeChanger("date")}
           />
         </div>
         <div className='form-group'>
