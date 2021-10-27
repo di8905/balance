@@ -6,8 +6,13 @@
 #
 default: &default
   adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  user: postgres
+  host: localhost
+  port: 6543
+  encoding: unicode
+  collation: C.UTF-8
+  template: template0
+  pool: 5
 
 development:
   <<: *default
