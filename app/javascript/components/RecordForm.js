@@ -23,8 +23,6 @@ export default class RecordForm extends React.Component {
             value={this.state.date}
             onChange={this.makeChanger("date")}
           />
-        </div>
-        <div className='form-group'>
           <input
             type="text"
             className="form-control"

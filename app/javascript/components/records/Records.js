@@ -1,6 +1,6 @@
 import React from "react";
-import Record from "./Record";
-import RecordForm from "./RecordForm";
+import Record from "../Record";
+import RecordForm from "../RecordForm";
 
 export default class Records extends React.Component {
 
@@ -10,6 +10,7 @@ export default class Records extends React.Component {
     return (
       <div className="records">
         <RecordForm></RecordForm>
+        <hr />
         <div >
           <h2 className={"title"}>Suppa records</h2>
           <table className={"table table-bordered"}>
