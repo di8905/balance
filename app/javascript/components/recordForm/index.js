@@ -6,11 +6,16 @@ export default class RecordForm extends React.Component {
   state = {
     title: '',
     date: '',
-    amount: 1
+    amount: '',
+    valid: false,
   }
 
-  makeChanger = key => value => {
-    this.setState(prevState => ({...prevState, [key]: value}))
+  makeChanger = key => e => {
+    this.setState(prevState => ({...prevState, [key]: e.target.value}))
+  }
+
+  valid = () => {
+    return this.state.title && this.state.date && this.state.amount
   }
 
   render () {
@@ -22,7 +27,7 @@ export default class RecordForm extends React.Component {
             type="text"
             placeholder="Date"
             name="Date"
-            value={this.state.date}
+            value={this.date}
             onChange={this.makeChanger("date")}
           />
           <input
@@ -31,7 +36,7 @@ export default class RecordForm extends React.Component {
             placeholder="Title"
             name="Title"
             value={this.title}
-            onChange={this.handleChange}
+            onChange={this.makeChanger("title")}
           />
           <input
             type="text"
@@ -45,7 +50,7 @@ export default class RecordForm extends React.Component {
         <button
           type="submit"
           className="btn btn-primary record-form__submit"
-          disabled={!this.state.valid}
+          disabled={!this.valid()}
         >
           Create Record
         </button>
