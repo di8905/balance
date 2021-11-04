@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./recordForm.scss"
+
 export default class RecordForm extends React.Component {
   state = {
     title: '',
@@ -13,7 +15,7 @@ export default class RecordForm extends React.Component {
 
   render () {
     return(
-      <form className='form-inline'>
+      <form className='form-inline record-form'>
         <div className='form-group'>
           <input
             className='form-control'
@@ -34,7 +36,7 @@ export default class RecordForm extends React.Component {
         </div>
         <button
           type="submit"
-          className="btn btn-primary"
+          className="btn btn-primary record-form__submit"
           disabled={!this.state.valid}
         >
           Create Record

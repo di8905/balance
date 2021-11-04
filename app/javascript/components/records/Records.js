@@ -1,6 +1,6 @@
 import React from "react";
 import Record from "../Record";
-import RecordForm from "../RecordForm";
+import RecordForm from "../recordForm/index";
 
 export default class Records extends React.Component {
 
@@ -9,7 +9,7 @@ export default class Records extends React.Component {
 
     return (
       <div className="records">
-        <RecordForm></RecordForm>
+        <RecordForm />
         <hr />
         <div >
           <h2 className={"title"}>Suppa records</h2>
