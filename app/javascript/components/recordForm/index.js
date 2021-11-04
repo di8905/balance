@@ -6,7 +6,7 @@ export default class RecordForm extends React.Component {
   state = {
     title: '',
     date: '',
-    amount: ''
+    amount: 1
   }
 
   makeChanger = key => value => {
@@ -30,8 +30,16 @@ export default class RecordForm extends React.Component {
             className="form-control"
             placeholder="Title"
             name="Title"
-            value={this.state.title}
+            value={this.title}
             onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Amount"
+            nama="Amount"
+            value={this.amount}
+            onChange={this.makeChanger("amount")}
           />
         </div>
         <button
