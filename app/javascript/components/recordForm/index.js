@@ -19,14 +19,16 @@ export default class RecordForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    console.log(this.state)
     fetch("",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({record: this.state}),
       }
-      ).then(response => response.json).then(this.props.addRecord())
+      )
+      // .then(response => this.props.addRecord(response.json) )
+      .then(response => response.json() )
+      .then(data => { this.props.addRecord(data) })
   }
 
   render () {
