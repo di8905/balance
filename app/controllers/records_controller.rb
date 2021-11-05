@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class RecordsController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def index
     @records = Record.all
   end
