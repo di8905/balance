@@ -3,13 +3,22 @@ import Record from "../Record";
 import RecordForm from "../recordForm/index";
 
 export default class Records extends React.Component {
+  state = {
+    records: this.props.data
+  }
+
+  addRecord = record => {
+    let records = this.state.records
+    records.push({title: "pepe", data: "data", amount: "amm"})
+    this.setState({records: records})
+  }
 
   render() {
-    const records = this.props.data
+    const records = this.state.records
 
     return (
       <div className="records">
-        <RecordForm />
+        <RecordForm addRecord={this.addRecord} />
         <hr />
         <div >
           <h2 className={"title"}>Suppa records</h2>

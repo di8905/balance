@@ -23,13 +23,14 @@ export default class RecordForm extends React.Component {
     fetch("",
       {
         method: "POST",
-        headers: { "Contebt-Type": "application/json" },
-        body: this.state
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({record: this.state}),
       }
-      ).then(response => response.json)
+      ).then(response => response.json).then(this.props.addRecord())
   }
 
   render () {
+    // const { addRecord } = this.props
     return(
       <form className='form-inline record-form' onSubmit={this.handleSubmit}>
         <div className='form-group'>
