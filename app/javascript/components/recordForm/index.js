@@ -4,9 +4,9 @@ import "./recordForm.scss"
 
 export default class RecordForm extends React.Component {
   state = {
-    title: '1',
-    date: '2',
-    amount: '3',
+    title: null,
+    date: null,
+    amount: null,
   }
 
   makeChanger = key => e => {
@@ -15,6 +15,10 @@ export default class RecordForm extends React.Component {
 
   valid = () => {
     return this.state.title && this.state.date && this.state.amount
+  }
+
+  clearForm = () => {
+    this.setState({ title: '', date: '', amount: '' })
   }
 
   handleSubmit = e => {
@@ -29,6 +33,7 @@ export default class RecordForm extends React.Component {
       // .then(response => this.props.addRecord(response.json) )
       .then(response => response.json() )
       .then(data => { this.props.addRecord(data) })
+      .then(this.clearForm)
   }
 
   render () {
