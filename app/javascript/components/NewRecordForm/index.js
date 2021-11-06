@@ -1,6 +1,6 @@
 import React from "react"
 
-import "./recordForm.scss"
+import "./RecordForm.scss"
 
 export default class RecordForm extends React.Component {
   state = {

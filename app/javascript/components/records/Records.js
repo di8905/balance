@@ -1,6 +1,7 @@
-import React from "react";
-import Record from "../Record";
-import RecordForm from "../recordForm/index";
+import React from "react"
+import Record from "../Record"
+import RecordForm from "../NewRecordForm/index"
+import AmountBox from "../AmountBox/index"
 
 export default class Records extends React.Component {
   state = {
@@ -14,11 +15,40 @@ export default class Records extends React.Component {
     this.setState({records: records})
   }
 
+  credits = () => {
+    let credits = this.state.records.filter(val => val.amount >= 0)
+    return  credits.reduce((sum, curr) => sum + parseFloat(curr.amount), 0)
+  }
+
+  debits = () => {
+    let debits = this.state.records.filter(val => val.amount < 0)
+    return debits.reduce((sum, curr) => sum + parseFloat(curr.amount), 0)
+  }
+
+  balance = () => this.debits() + this.credits()
+
   render() {
     const records = this.state.records
 
     return (
       <div className="records">
+        <div className="row">
+          <AmountBox
+            type="success"
+            amount={this.credits()}
+            text="Credit"
+          />
+          <AmountBox
+            type="danger"
+            amount={this.debits()}
+            text="Debit"
+          />
+          <AmountBox
+          type="info"
+          amount={this.balance()}
+          text="Balance"
+          />
+        </div>
         <RecordForm addRecord={this.addRecord} />
         <hr />
         <div >
