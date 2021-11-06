@@ -9,7 +9,7 @@ export default class Record extends React.Component {
         method: "DELETE",
       }
     )
-    .then(()=> alert(this.props.record.id))
+    .then(()=> this.props.deleteFromRecords(this.props.record))
   }
 
   render () {

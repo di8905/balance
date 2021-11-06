@@ -25,6 +25,13 @@ export default class Records extends React.Component {
     return debits.reduce((sum, curr) => sum + parseFloat(curr.amount), 0)
   }
 
+  deleteFromRecords = record => {
+    let records = this.state.records
+    const index = records.indexOf(record)
+    records.splice(index, 1)
+    this.setState({ records: records })
+  }
+
   balance = () => this.debits() + this.credits()
 
   render() {
@@ -64,7 +71,7 @@ export default class Records extends React.Component {
             </thead>
             <tbody>
             {records.map((record) => (
-              <Record record={record} />
+              <Record record={record} deleteFromRecords={this.deleteFromRecords}/>
             ))}
             </tbody>
           </table>
