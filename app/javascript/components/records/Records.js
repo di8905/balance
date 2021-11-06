@@ -59,6 +59,7 @@ export default class Records extends React.Component {
               <th>Date</th>
               <th>Title</th>
               <th>Amount</th>
+              <th>Actions</th>
             </tr>
             </thead>
             <tbody>
