@@ -13,4 +13,9 @@
     date: i.days.ago,
     amount: i * 10
   )
+  Record.create(
+    title: "Record #{i}",
+    date: i.days.ago,
+    amount: -(i * 10)
+  )
 end

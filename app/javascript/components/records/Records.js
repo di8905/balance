@@ -17,15 +17,15 @@ export default class Records extends React.Component {
 
   credits = () => {
     let credits = this.state.records.filter(val => val.amount >= 0)
-    return  credits.reduce((sum, curr) => prev + parseFloat(curr.amount), 0)
+    return  credits.reduce((sum, curr) => sum + parseFloat(curr.amount), 0)
   }
 
   debits = () => {
     let debits = this.state.records.filter(val => val.amount < 0)
-    debits.reduce((sum, curr) => prev + parseFloat(curr.amount), 0)
+    return debits.reduce((sum, curr) => sum + parseFloat(curr.amount), 0)
   }
 
-  balance = () => this.debits + this.credits
+  balance = () => this.debits() + this.credits()
 
   render() {
     const records = this.state.records
@@ -33,7 +33,21 @@ export default class Records extends React.Component {
     return (
       <div className="records">
         <div className="row">
-
+          <AmountBox
+            type="success"
+            amount={this.credits()}
+            text="Credit"
+          />
+          <AmountBox
+            type="danger"
+            amount={this.debits()}
+            text="Debit"
+          />
+          <AmountBox
+          type="info"
+          amount={this.balance()}
+          text="Balance"
+          />
         </div>
         <RecordForm addRecord={this.addRecord} />
         <hr />
