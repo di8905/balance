@@ -2,7 +2,10 @@ import React from "react";
 
 export default class Record extends React.Component {
 
-  state = { edit: false }
+  state = {
+    edit: false,
+    record: this.props.record,
+  }
 
   handleDelete = e => {
     e.preventDefault()
@@ -14,43 +17,59 @@ export default class Record extends React.Component {
     .then(()=> this.props.deleteFromRecords(this.props.record))
   }
 
+  makeChanger = key => event => {
+    this.setState(prevState => (
+      { record: { ...prevState.record, [key]: event.target.value } })
+    )
+  }
+
   handleEditToggle = e => {
     e.preventDefault()
     this.setState(prevState => ({ edit: !prevState.edit }))
   }
 
   handleEdit = () => {
-    alert("aaa")
+    console.log(this.record)
   }
 
-  recordForm = record => {
+  get record () {
+    return this.state.record
+  }
+
+  recordForm = () => {
+
+    const { record } = this.state
+
     return(
       <tr>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={record.date}
+            value={record.date}
+            onChange={this.makeChanger("date")}
           />
         </td>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={record.title}
+            value={record.title}
+            onChange={this.makeChanger("title")}
           />
         </td>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={record.amount}
+            value={record.amount}
+            onChange={this.makeChanger("amount")}
           />
         </td>
         <td>
           <a
             className="btn btn-default"
-            onclick={this.handleEdit}
+            onClick={this.handleEdit}
           >
             Update
           </a>
@@ -66,7 +85,10 @@ export default class Record extends React.Component {
 
   }
 
-  recordRow = record => {
+  recordRow = () => {
+
+    const { record } = this.state
+
     return(
       <tr>
         <td>{record.date}</td>
@@ -91,7 +113,7 @@ export default class Record extends React.Component {
   }
 
   render () {
-    const { record } = this.props
+    const { record } = this.state
 
     return (
       this.state.edit ? this.recordForm(record) : this.recordRow(record)

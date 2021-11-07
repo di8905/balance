@@ -9,7 +9,6 @@ export default class Records extends React.Component {
   }
 
   addRecord = record => {
-    console.log(record)
     let records = this.state.records
     records.push(record)
     this.setState({records: records})
