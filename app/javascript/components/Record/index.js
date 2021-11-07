@@ -23,28 +23,28 @@ export default class Record extends React.Component {
     alert("aaa")
   }
 
-  recordForm = () => {
+  recordForm = record => {
     return(
       <tr>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={this.props.record.date}
+            defaultValue={record.date}
           />
         </td>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={this.props.record.title}
+            defaultValue={record.title}
           />
         </td>
         <td>
           <input
             className="form-control"
             type="text"
-            defaultValue={this.props.record.amount}
+            defaultValue={record.amount}
           />
         </td>
         <td>
@@ -66,7 +66,7 @@ export default class Record extends React.Component {
 
   }
 
-  recordRow = () => {
+  recordRow = record => {
     return(
       <tr>
         <td>{record.date}</td>
@@ -94,7 +94,7 @@ export default class Record extends React.Component {
     const { record } = this.props
 
     return (
-
+      this.state.edit ? this.recordForm(record) : this.recordRow(record)
     )
 
   }
