@@ -1,7 +1,7 @@
 import React from "react"
 import Record from "../Record"
-import RecordForm from "../NewRecordForm/index"
-import AmountBox from "../AmountBox/index"
+import RecordForm from "../NewRecordForm"
+import AmountBox from "../AmountBox"
 
 export default class Records extends React.Component {
   state = {
