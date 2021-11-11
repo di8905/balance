@@ -30,6 +30,18 @@ export default class Record extends React.Component {
 
   handleEdit = () => {
     console.log(this.record)
+    fetch(`records/${this.record.id}`,
+      {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({record: this.record}),
+      }
+    )
+    .then(response => response.json())
+    .then(data => { this.props.changeRecords(data) })
+    .then(() => {
+      this.setState({edit: false})
+    })
   }
 
   get record () {

@@ -31,6 +31,12 @@ export default class Records extends React.Component {
     this.setState({ records: records })
   }
 
+  changeRecords = record => {
+    let records = this.state.records
+    const index = records.indexOf(record)
+    records.splice(index, 1, record)
+  }
+
   balance = () => this.debits() + this.credits()
 
   render() {
@@ -70,7 +76,11 @@ export default class Records extends React.Component {
             </thead>
             <tbody>
             {records.map((record) => (
-              <Record record={record} deleteFromRecords={this.deleteFromRecords}/>
+              <Record
+                record={record}
+                deleteFromRecords={this.deleteFromRecords}
+                changeRecords={this.changeRecords}
+              />
             ))}
             </tbody>
           </table>

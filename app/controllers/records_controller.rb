@@ -4,7 +4,7 @@ class RecordsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @records = Record.all
+    @records = Record.all.order(:id)
   end
 
   def create
@@ -17,7 +17,7 @@ class RecordsController < ApplicationController
     end
   end
 
-  def edit
+  def update
     record = Record.find(params[:id])
     if record.update(record_params)
       render json: record
