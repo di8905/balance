@@ -1,7 +1,7 @@
 import React from "react"
 import Record from "../Record"
-import RecordForm from "../NewRecordForm/index"
-import AmountBox from "../AmountBox/index"
+import RecordForm from "../NewRecordForm"
+import AmountBox from "../AmountBox"
 
 export default class Records extends React.Component {
   state = {
@@ -9,7 +9,6 @@ export default class Records extends React.Component {
   }
 
   addRecord = record => {
-    console.log(record)
     let records = this.state.records
     records.push(record)
     this.setState({records: records})
@@ -30,6 +29,12 @@ export default class Records extends React.Component {
     const index = records.indexOf(record)
     records.splice(index, 1)
     this.setState({ records: records })
+  }
+
+  changeRecords = record => {
+    let records = this.state.records
+    const index = records.indexOf(record)
+    records.splice(index, 1, record)
   }
 
   balance = () => this.debits() + this.credits()
@@ -71,7 +76,11 @@ export default class Records extends React.Component {
             </thead>
             <tbody>
             {records.map((record) => (
-              <Record record={record} deleteFromRecords={this.deleteFromRecords}/>
+              <Record
+                record={record}
+                deleteFromRecords={this.deleteFromRecords}
+                changeRecords={this.changeRecords}
+              />
             ))}
             </tbody>
           </table>
